@@ -1,0 +1,66 @@
+<html>
+
+<head>
+	<title>Web3 Modal</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Web3 modal Test Project</h1>
+
+				<div id="prepare">
+					<button class="btn btn-primary" id="btn-connect">
+						Connect wallet
+					</button>
+				</div>
+
+				<div id="connected" style="display: none">
+
+					<div id="network">
+						<p>
+							<strong>Connected net:</strong> <span id="network-name"></span>
+						</p>
+
+						<p>
+							<strong>Connected account:</strong> <span id="selected-account"></span>
+						</p>
+
+					</div>
+
+					<table class="table table-listing">
+						<thead>
+							<th>Address</th>
+							<th>Balance</th>
+						</thead>
+
+						<tbody id="accounts">
+						</tbody>
+					</table>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div id="templates" style="display: none">
+		<template id="template-balance">
+			<tr>
+				<th class="address"></th>
+				<td class="balance"></td>
+			</tr>
+		</template>
+	</div>
+
+	<script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
+	<script type="text/javascript" src="./hook.js"></script>
+</body>
+
+</html>
